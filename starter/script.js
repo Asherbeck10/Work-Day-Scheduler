@@ -41,4 +41,34 @@ if (moment().format('k')==9) {
 }
     
 
+// **10AM**
+//adding tasks
+$('#t10').on('click',function(event) {
 
+    let $submitText=$(event.target).siblings('textarea').val()
+    if ($submitText===[""]) {
+        $('#in10').text('""')
+    }
+        
+    localStorage.setItem("t10",$submitText);
+     
+ })
+ 
+ $("#in10").text(localStorage.getItem("t10"));
+
+   
+
+//changing colors
+
+if (moment().format('k')==10) {
+   $('#in10').css('background',' #ff6961');
+   $('#in10').css('color', 'white');
+
+}else if (moment().format('k')<10) {
+    $('#in10').css('background',' #77dd77');
+    $('#in10').css('color', 'white');
+    
+}else{
+    $('#in10').css('background',' #d3d3d3');
+    $('#in10').css('color', 'black');
+}
