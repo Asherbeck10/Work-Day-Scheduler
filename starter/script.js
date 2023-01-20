@@ -13,6 +13,10 @@ $('#currentDay').text(today.format('D MMM YYYY'));
 $('#t9').on('click',function(event) {
 
     let $submitText=$(event.target).siblings('textarea').val()
+    if ($submitText==="") {
+        $('#in9').text(" ")
+    }
+        
     localStorage.setItem("t9",$submitText);
     
  })
