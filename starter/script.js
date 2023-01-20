@@ -1,4 +1,4 @@
-let $nineHour=$('#t9')
+
 
 //current day at the top of the calender
 let today = moment();
@@ -8,16 +8,33 @@ $('#currentDay').text(today.format('D MMM YYYY'));
 
 
 
-// 9AM
-$nineHour.on('click',function(event) {
-    
+// **9AM**
+//adding tasks
+$('#t9').on('click',function(event) {
+
     let $submitText=$(event.target).siblings('textarea').val()
     localStorage.setItem("t9",$submitText);
+    
+ })
+ 
+ $("#in9").text(localStorage.getItem("t9")); 
+
    
-    console.log($submitText);
 
+//changing colors
 
-})
+if (moment().format('k')==9) {
+   $('#in9').css('background',' #ff6961');
+   $('#in9').css('color', 'white');
 
-$("#in9").text(localStorage.getItem("t9"))
+}else if (moment().format('k')<9) {
+    $('#in9').css('background',' #77dd77');
+    $('#in9').css('color', 'white');
+    
+}else{
+    $('#in9').css('background',' #d3d3d3');
+    $('#in9').css('color', 'white');
+}
+    
+
 
