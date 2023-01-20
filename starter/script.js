@@ -13,15 +13,15 @@ $('#currentDay').text(today.format('D MMM YYYY'));
 $('#t9').on('click',function(event) {
 
     let $submitText=$(event.target).siblings('textarea').val()
-    if ($submitText==="") {
-        $('#in9').text(" ")
+    if ($submitText===[""]) {
+        $('#in9').text('""')
     }
         
     localStorage.setItem("t9",$submitText);
-    
+     
  })
  
- $("#in9").text(localStorage.getItem("t9")); 
+ $("#in9").text(localStorage.getItem("t9"));
 
    
 
@@ -37,7 +37,7 @@ if (moment().format('k')==9) {
     
 }else{
     $('#in9').css('background',' #d3d3d3');
-    $('#in9').css('color', 'white');
+    $('#in9').css('color', 'black');
 }
     
 
