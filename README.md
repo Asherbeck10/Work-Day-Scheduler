@@ -14,7 +14,7 @@
 ## About The Project
 
 ![Product start screen](./images/work-day-scheduler_.png)
-This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.The tim lines are color-coded each time line color based on past(gary), present(red), and future (green).
+This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.The time lines are color-coded each time line color based on past(gary), present(red), and future (green).
 
 
 Here's why:
